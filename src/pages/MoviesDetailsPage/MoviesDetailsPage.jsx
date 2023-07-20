@@ -69,6 +69,11 @@ const MoviesDetailsPage = () => {
             <p className="link">Reviews</p>
           </Link>
         )}
+        {isMovies && (
+          <Link state={{ from }} to={`backdrop`}>
+            <p className="link">Backdrop</p>
+          </Link>
+        )}
       </div>
       <Outlet />
     </MoviesDetailsS>

@@ -34,3 +34,8 @@ export const getReviews = async id => {
 
   return data;
 };
+export const getBackdrop = async id => {
+  const { data } = await instance.get(`/movie/${id}/images`);
+
+  return data;
+};

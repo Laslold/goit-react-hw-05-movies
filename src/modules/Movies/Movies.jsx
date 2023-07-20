@@ -18,6 +18,7 @@ const Movies = () => {
       }));
       try {
         const data = await getMovies();
+
         setState(prevState => ({
           ...prevState,
           items: [...data.results],
