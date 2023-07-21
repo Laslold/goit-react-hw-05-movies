@@ -27,6 +27,7 @@ const SearchForm = ({ onSubmit }) => {
         value={state.search}
         type="text"
         placeholder="Enter movies"
+        required
       ></input>
       <button type="submit">Search</button>
     </form>

@@ -61,8 +61,9 @@ const MoviesSearch = () => {
     if (search) {
       fetchMovie();
     }
-  }, [search, setState]);
+  }, [search]);
   const changeSearch = ({ search }) => setSearchParams({ search });
+
   const { items } = state;
 
   return (
