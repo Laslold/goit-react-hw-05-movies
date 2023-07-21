@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-
+import PropTypes from 'prop-types';
 import { getMovieDetails } from 'shared/api/posts';
 import {
   Link,
@@ -78,5 +78,9 @@ const MoviesDetailsPage = () => {
       <Outlet />
     </MoviesDetailsS>
   );
+};
+MoviesDetailsPage.propTypes = {
+  movie: PropTypes.object.isRequired,
+  getMovieDetails: PropTypes.func.isRequired,
 };
 export default MoviesDetailsPage;

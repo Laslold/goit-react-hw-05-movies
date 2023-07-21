@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getCast } from 'shared/api/posts';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { CastPageS, CastPageItms } from './CastPage.styled';
 import noFase from '../../images/NoImageFace.png';
 
@@ -67,5 +68,14 @@ const CastPage = () => {
     </div>
   );
 };
-
+CastPage.propTypes = {
+  getCast: PropTypes.func,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      character: PropTypes.string.isRequired,
+      profile_path: PropTypes.string.isRequired,
+    })
+  ),
+};
 export default CastPage;
