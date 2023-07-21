@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { getBackdrop } from '../../shared/api/posts';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
+
 import { BackdropS, CastPageItms } from './Backdrop.styled';
 import noPoster from '../../images/NoImagesPoster.jpg';
 const BackdropsPage = () => {
@@ -47,8 +47,8 @@ const BackdropsPage = () => {
       : `${noPoster}`;
 
     return (
-      <BackdropS key={id}>
-        <img src={capImg} alt={file_path} width="180" height="100" />
+      <BackdropS key={file_path}>
+        <img src={capImg} alt="some backdrops" width="180" height="100" />
       </BackdropS>
     );
   });
@@ -66,8 +66,5 @@ const BackdropsPage = () => {
     </div>
   );
 };
-BackdropsPage.propTypes = {
-  items: PropTypes.object.isRequired,
-  getBackdrop: PropTypes.func.isRequired,
-};
+
 export default BackdropsPage;

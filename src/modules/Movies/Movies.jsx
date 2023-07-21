@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+
 import { getMovies } from 'shared/api/posts';
 import MoviesList from 'shared/component/MoviesList';
 const Movies = () => {
@@ -44,8 +44,5 @@ const Movies = () => {
     </>
   );
 };
-Movies.propTypes = {
-  getMovies: PropTypes.func,
-  items: PropTypes.object,
-};
+
 export default Movies;

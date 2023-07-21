@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { getMovieDetails } from 'shared/api/posts';
 import {
   Link,
@@ -11,6 +10,7 @@ import {
 } from 'react-router-dom';
 import { MoviesDetailsS } from './MoviesDetails.styled';
 import MovieDetails from 'modules/MoviesDetails/MoviesDetails';
+
 const MoviesDetailsPage = () => {
   const [state, setState] = useState({
     movie: {},
@@ -79,8 +79,5 @@ const MoviesDetailsPage = () => {
     </MoviesDetailsS>
   );
 };
-MoviesDetailsPage.propTypes = {
-  movie: PropTypes.object.isRequired,
-  getMovieDetails: PropTypes.func.isRequired,
-};
+
 export default MoviesDetailsPage;

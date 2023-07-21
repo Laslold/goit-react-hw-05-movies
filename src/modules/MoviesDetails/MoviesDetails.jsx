@@ -45,12 +45,12 @@ const MovieDetails = ({
 };
 MovieDetails.propTypes = {
   title: PropTypes.string,
-  overview: PropTypes.string,
-  poster_path: PropTypes.string,
-  vote_average: PropTypes.number,
-  release_date: PropTypes.string,
-  genres: PropTypes.array,
+  overview: PropTypes.string.isRequired,
+  poster_path: PropTypes.string.isRequired,
+  vote_average: PropTypes.number.isRequired,
+  release_date: PropTypes.string.isRequired,
+  genres: PropTypes.array.isRequired,
   original_name: PropTypes.string,
-  homepage: PropTypes.string,
+  homepage: PropTypes.string.isRequired,
 };
 export default MovieDetails;

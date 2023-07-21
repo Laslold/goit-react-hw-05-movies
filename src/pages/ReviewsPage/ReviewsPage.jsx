@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getReviews } from '../../shared/api/posts';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { ReviewPageS } from './ReviewsPage.styled';
 
 const ReviewsPage = () => {
@@ -59,8 +58,5 @@ const ReviewsPage = () => {
     </div>
   );
 };
-ReviewsPage.propTypes = {
-  items: PropTypes.object.isRequired,
-  getReviews: PropTypes.func.isRequired,
-};
+
 export default ReviewsPage;

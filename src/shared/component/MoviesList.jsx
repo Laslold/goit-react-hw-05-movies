@@ -27,9 +27,12 @@ MoviesList.defaultProps = {
   items: [],
 };
 MoviesList.propTypes = {
-  items: PropTypes.array.isRequired,
-  title: PropTypes.string,
-  original_name: PropTypes.string,
-  backdrop_path: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      original_name: PropTypes.string,
+      backdrop_path: PropTypes.string,
+    }).isRequired
+  ).isRequired,
 };
 export default MoviesList;

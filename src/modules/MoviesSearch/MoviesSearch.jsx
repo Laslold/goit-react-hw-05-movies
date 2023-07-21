@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import SearchForm from './SearchForm/SearchForm';
 import MoviesList from 'shared/component/MoviesList';
-import PropTypes from 'prop-types';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 import { getSearchMovies } from 'shared/api/posts';
 import { useSearchParams } from 'react-router-dom';
 
@@ -73,8 +74,5 @@ const MoviesSearch = () => {
     </div>
   );
 };
-MoviesSearch.propTypes = {
-  items: PropTypes.object.isRequired,
-  getSearchMovies: PropTypes.func.isRequired,
-};
+
 export default MoviesSearch;
